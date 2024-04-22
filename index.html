@@ -37,13 +37,14 @@
       color: #080000; /* Dark gray color for the paragraph */
       margin: 0;
     }
-     @media (max-width: 768px) {
+
+    @media (max-width: 768px) {
       .embed-responsive-16by9 {
         height: auto; /* Reset height for responsiveness */
+        overflow: hidden; /* Hide overflow to prevent scrolling */
       }
-      .embed-responsive-16by9 iframe {
-        height: 100%; /* Ensure iframe fills container height */
-        overflow-y: scroll; /* Add scroll bars for overflow */
+      .embed-responsive-item {
+        max-height: 300px; /* Adjust max-height as needed */
       }
     }
   </style>
