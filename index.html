@@ -8,9 +8,9 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <style>
     /* Custom styles */
-    body{
-        background-color:rgb(245, 242, 244);
-        color: rgb(40, 2, 24);
+    body {
+      background-color: rgb(245, 242, 244);
+      color: rgb(40, 2, 24);
     }
     #locationInfo {
       margin-top: 20px;
@@ -21,30 +21,27 @@
       border-collapse: collapse;
       margin-bottom: 20px;
     }
-
     .table td {
-      /* padding: 20px; */
       border: 2px solid black;
     }
-
     .table h1 {
-      color: black; /* Blue color for the heading */
-      align-items:center ;
+      color: black;
+      align-items: center;
       margin-bottom: 10px;
     }
-
     .table p {
-      color: #080000; /* Dark gray color for the paragraph */
+      color: #080000;
       margin: 0;
     }
-
+    iframe {
+      margin-bottom: 20px;
+      width: 100%; /* Full width */
+      height: calc(500px * 9 / 16); /* 5:20 aspect ratio */
+    }
     @media (max-width: 768px) {
-      .embed-responsive-16by9 {
-        height: auto; /* Reset height for responsiveness */
-        overflow: hidden; /* Hide overflow to prevent scrolling */
-      }
-      .embed-responsive-item {
-        max-height: 300px; /* Adjust max-height as needed */
+     
+      iframe {
+        width: calc(400px * 17 / 20); /* 12:20 aspect ratio */
       }
     }
   </style>
@@ -52,20 +49,20 @@
 <body>
   <div class="container">
     <div style="text-align: center;">
-    <h1>KONGU ENGINEERING COLLEGE</h1>
-    <h2>INFORMATION TECHNOLOGY</h2>
-    <h3>CLOUD COMPUTING LABORATORY</h3><br/>
+      <h1>KONGU ENGINEERING COLLEGE</h1>
+      <h2>INFORMATION TECHNOLOGY</h2>
+      <h3>CLOUD COMPUTING LABORATORY</h3><br/>
     </div>  
     <table class="table">
-        <tr>
-          <td>
-            <p style="font-weight: bold;font-size: 20px;">EX.NO:9</p>
-          </td>
-          <td >
-            <p style="font-weight: bold;font-size: 20px;">This webpage demonstrates how to use geolocation in JavaScript.Click the button above to get your current location.</p>
-          </td>
-        </tr>
-      </table>
+      <tr>
+        <td>
+          <p style="font-weight: bold;font-size: 20px;">EX.NO:9</p>
+        </td>
+        <td >
+          <p style="font-weight: bold;font-size: 20px;">This webpage demonstrates how to use geolocation in JavaScript. Click the button above to get your current location.</p>
+        </td>
+      </tr>
+    </table>
     <div class="row justify-content-center">
       <div class="col-md-2">
         <button class="btn btn-primary btn-block" onclick="getLocation()">Get My Location</button>
@@ -76,14 +73,10 @@
   <div class="container mt-4">
     <div class="row justify-content-center">
       <div class="col-md-6">
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" style="border: 1px solid #cccccc;" scrolling="yes" src="https://thingspeak.com/channels/2517974/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
-        </div>
+        <iframe  src="https://thingspeak.com/channels/2517974/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
       </div>
       <div class="col-md-6 mt-4 mt-md-0">
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" style="border: 1px solid #cccccc;"scrolling="yes" src="https://thingspeak.com/channels/2517974/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
-        </div>
+        <iframe src="https://thingspeak.com/channels/2517974/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
       </div>
     </div><br/>
   </div>
