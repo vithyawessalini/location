@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Geolocation Button</title>
+  <title>Geolocation</title>
   <!-- Bootstrap CSS -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
-      background-color: rgb(245, 242, 244);
+      background-color: rgb(235, 232, 234);
       color: rgb(40, 2, 24);
     }
     #locationInfo {
@@ -19,6 +19,11 @@
       width: 100%;
       border-collapse: collapse;
       margin-bottom: 20px;
+    }
+    .btn-custom {
+        background-color: #612801; /* Orange color */
+        border-color: black; /* Border color */
+        color: white;
     }
     .table td {
       border: 2px solid black;
@@ -48,10 +53,11 @@
 </head>
 <body>
   <div class="container">
-    <div style="text-align: center;">
-      <h1>KONGU ENGINEERING COLLEGE</h1>
-      <h2>INFORMATION TECHNOLOGY</h2>
-      <h3>CLOUD COMPUTING LABORATORY</h3><br/>
+    <div style="text-align: center;"class="header">
+      <br/>
+      <h2>KONGU ENGINEERING COLLEGE</h2>
+      <h3>INFORMATION TECHNOLOGY</h3>
+      <h4>CLOUD COMPUTING LABORATORY</h4><br/>
     </div>  
     <table class="table">
       <tr>
@@ -63,9 +69,9 @@
         </td>
       </tr>
     </table>
-    <div class="row justify-content-center">
-      <div class="col-md-2">
-        <button class="btn btn-primary btn-block" onclick="getLocation()">Get My Location</button>
+     <div class="row justify-content-center">
+      <div class="col-md-2"><br/>
+        <button class="btn btn-custom btn-block" onclick="getLocation()">Get My Location</button>
         <div id="locationInfo" class="text-center"></div>
       </div>
     </div>
